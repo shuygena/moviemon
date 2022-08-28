@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% load static %} {% block title %}
+<title> Worldmap </title>
+{% endblock title %}  {% block content %}
+    <div class="worldmap"></div>
+    <div class="player" style="left: {{x}}px; top: {{y}}px;"></div>
+    <div class="eggs"> &#128030;  x  {{score}} </div>
+    {% if msg != "" %}
+        <div class="message" > {{msg}} </div>
+    {% endif %}
+{% endblock content %}

@@ -1,0 +1,5 @@
+asgiref==3.5.2
+Django==4.0.4
+sqlparse==0.4.2
+requests==2.27.1
+omdb==0.10.1

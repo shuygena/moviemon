@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        {% block title %}{% endblock title %}
+        <link rel="stylesheet" href="{% static 'style.css' %}" />
+    </head>
+    <body>
+        <div class="movie-mon">
+            <div class="display">
+                {% block content %}{% endblock content %}
+            </div>
+            <div class="controls">
+                <div class="main-buttons">
+                    <div class="start">
+                        <div class="name">start</div>
+                        <a href="{{request.path}}?key=start" class="button"></a>
+                    </div>
+                    <div class="select">
+                        <div class="name">select</div>
+                        <a href="{{request.path}}?key=select" class="button"></a>
+                    </div>
+                </div>
+                <div class="secondary-buttons">
+                    <div class="arrows">
+                        <a href="{{request.path}}?key=up" class="arrow arrow-up"></a>
+                        <div class="arrows-left-right">
+                            <a href="{{request.path}}?key=left" class="arrow arrow-left"></a>
+                            <div class="arrow arrow-empty"></div>
+                            <a href="{{request.path}}?key=right" class="arrow arrow-right"></a>
+                        </div>
+                        <a href="{{request.path}}?key=down" class="arrow arrow-down"></a>
+                    </div>
+                    <div class="buttons">
+                        <a href="{{request.path}}?key=button1" class="button">A</a>
+                        <a href="{{request.path}}?key=button2" class="button">B</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
+    
